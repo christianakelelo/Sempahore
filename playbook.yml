@@ -1,0 +1,38 @@
+---
+- name: Deploy Docker containers with different colors
+  hosts: prod
+  become: yes
+  tasks:
+    - name: Deploy web-color container with default color
+      docker_container:
+        name: web-color
+        image: "kodekloud/webapp-color"
+        env:
+          APP_COLOR: "{{ default_color | default('') }}"
+        ports:
+          - "8181:8080"
+      tags:
+        - deploy
+
+    - name: Deploy web-color container with red color
+      docker_container:
+        name: web-color
+        image: "kodekloud/webapp-color"
+        env:
+          APP_COLOR: "{{ red_color }}"
+        ports:
+          - "8282:8080"
+      tags:
+        - red_color
+
+    - name: Deploy web-color container with yellow color
+      docker_container:
+        name: web-color
+        image: "kodekloud/webapp-color"
+        env:
+          APP_COLOR: "{{ yellow_color }}"
+        ports:
+          - "8383:8080"
+      tags:
+        - yellow_color
+
