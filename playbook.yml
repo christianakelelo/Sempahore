@@ -10,7 +10,7 @@
         env:
           APP_COLOR: "{{ default_color | default('') }}"
         ports:
-          - "8181:8181"
+          - "8181:8080"
       tags:
         - deploy
 
@@ -21,7 +21,7 @@
         env:
           APP_COLOR: "{{ red_color }}"
         ports:
-          - "8282:8282"
+          - "8282:8080"
       tags:
         - red_color
 
@@ -32,7 +32,7 @@
         env:
           APP_COLOR: "{{ blue_color }}"
         ports:
-          - "8383:8383"
+          - "8383:8080"
       tags:
         - blue_color
 
