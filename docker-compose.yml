@@ -27,7 +27,7 @@ services:
       SEMAPHORE_ADMIN_NAME: admin
       SEMAPHORE_ADMIN_EMAIL: admin@localhost
       SEMAPHORE_ADMIN: admin
-      SEMAPHORE_ACCESS_KEY_ENCRYPTION: u0aKdC+eL9GeylV0whAz0pkC5MO9Yx4EcaZcNfeLLfE=
+      SEMAPHORE_ACCESS_KEY_ENCRYPTION: 0t39OkEUyyzdoDJUhj1wItJBbCuvRB6Hn14XyXh3Osc=
       SEMAPHORE_LDAP_ACTIVATED: 'no' # if you wish to use ldap, set to: 'yes' 
       SEMAPHORE_LDAP_HOST: dc01.local.example.com
       SEMAPHORE_LDAP_PORT: '636'
